@@ -4,13 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Feu feu = new Feu();
         feu.changerCouleur("Vert");
-        System.out.println(feu.getCouleur());
-        Pietons p=new Pietons();
-        p.testerMovement(feu);
-        System.out.println(p.getEnMovementP());
-        feu.changerCouleur("vert");
-        p.testerMovement(feu);
-        System.out.println(p.getEnMovementP());
+        Pietons p=new Pietons(true,12,13);
+        Vehicules v=new Vehicules(true,13,15);
+        System.out.println(p.testerMovement(feu));
+        System.out.println(v.calculerDistance(p));
+        System.out.println(v.calculerAngle(p));
+        System.out.println(v.verifierArret(p,3,180));
 
 //Travail inspiré de chatgbt.
     }

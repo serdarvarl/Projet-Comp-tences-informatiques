@@ -5,6 +5,11 @@ public class Vehicules {
     double axeXV;
     double axeYV;
 
+    public Vehicules(boolean enMovement, double axeXV, double axeYV) {
+        this.enMovement = enMovement;
+        this.axeXV = axeXV;
+        this.axeYV = axeYV;
+    }
 
     public Vehicules() {
         this.enMovement = false;
@@ -32,16 +37,15 @@ public class Vehicules {
         double dy = pieton.getAxeYP() - this.axeYV;
         return atan2(dy, dx);
     }
-    public void verifierArret(Pietons pieton, double distanceSeuil, double angleSeuil) {
+    public boolean verifierArret(Pietons pieton, double distanceSeuil, double angleSeuil) {
         double distance = calculerDistance(pieton);
         double angle =toDegrees(calculerAngle(pieton)); // Convertir l'angle en degrés
 
         if (distance <= distanceSeuil && abs(angle) <= angleSeuil) {
-            this.enMovement = true;
-            System.out.println("Le véhicule s'arrête.");
+            return this.enMovement = true;
         } else {
-            this.enMovement = false;
-            System.out.println("Le véhicule continue.");
+            return this.enMovement = false;
+
         }
     }
 }

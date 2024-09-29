@@ -2,6 +2,13 @@ public class Pietons {
     private boolean enMovementP;
     private double axeXP;
     private double axeYP;
+
+    public Pietons(boolean enMovementP, double axeXP, double axeYP) {
+        this.enMovementP = enMovementP;
+        this.axeXP = axeXP;
+        this.axeYP = axeYP;
+    }
+
     public Pietons(){
         this.enMovementP=enMovementP;
 
