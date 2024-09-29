@@ -1,7 +1,7 @@
 public class Pietons {
     private boolean enMovementP;
-    double axeXP;
-    double axeYP;
+    private double axeXP;
+    private double axeYP;
     public Pietons(){
         this.enMovementP=enMovementP;
 
