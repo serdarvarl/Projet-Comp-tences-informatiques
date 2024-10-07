@@ -7,40 +7,40 @@ public class SimulationPanel extends JPanel {
     private Vehicules vehicle;
     private Pietons pedestrian;
     private Feu trafficLight;
-    private Timer timer; // Timer for updating the simulation
+    private Timer timer; // Timer puor update simulation
 
     public SimulationPanel() {
         // Initialize the objects
         trafficLight = new Feu();
-        trafficLight.changerCouleur("Vert"); // Set initial color to Green
+        trafficLight.changerCouleur("Vert"); // initial color est vert
 
-        vehicle = new Vehicules(true, 100, 200); // Create a vehicle
-        pedestrian = new Pietons(true, 200, 300); // Create a pedestrian
+        vehicle = new Vehicules(true, 100, 200); // creer vehicule
+        pedestrian = new Pietons(true, 200, 300); // creer pieton
 
-        // Timer to update the simulation every 100 ms (10 FPS)
+        // timer update chaque 100 ms (10 FPS)
         timer = new Timer(100, e -> updateSimulation());
     }
 
     public void startSimulation() {
-        timer.start(); // Start the timer to run the simulation
+        timer.start(); // starter times
     }
 
     private void updateSimulation() {
-        // Update vehicle and pedestrian movement logic based on traffic light
-        boolean vehicleMoving = vehicle.verifierArret(pedestrian, 100, 180); // Check if vehicle should stop
-        boolean pedestrianMoving = pedestrian.testerMovement(trafficLight); // Check if pedestrian should move
+        //update vehicule et pieton sur logique de sirqulation
+        boolean vehicleMoving = vehicle.verifierArret(pedestrian, 100, 180); // check si il doit vehicule stop
+        boolean pedestrianMoving = pedestrian.testerMovement(trafficLight); // check si il doit pieton se depalcer
 
         if (vehicleMoving) {
-            // Move the vehicle to the left
+            // deplacer vers la gauche
             vehicle.axeXV -= 2;
         }
 
         if (pedestrianMoving) {
-            // Move the pedestrian upward
+            // deplacer pieton vers la haut
             pedestrian = new Pietons(true, pedestrian.getAxeXP(), pedestrian.getAxeYP() - 2);
         }
 
-        // Redraw the scene
+        // redesiner
         repaint();
     }
 
@@ -50,14 +50,14 @@ public class SimulationPanel extends JPanel {
 
         // Draw the traffic light
         g.setColor(trafficLight.getCouleur().equals("Vert") ? Color.GREEN : Color.RED);
-        g.fillRect(50, 50, 20, 60); // Traffic light box
+        g.fillRect(50, 50, 20, 60); // desiner feu
 
         // Draw the vehicle
         g.setColor(Color.BLUE);
-        g.fillRect((int) vehicle.axeXV, (int) vehicle.axeYV, 50, 30); // Draw the car
+        g.fillRect((int) vehicle.axeXV, (int) vehicle.axeYV, 50, 30); // desiner vehicule
 
         // Draw the pedestrian
         g.setColor(Color.ORANGE);
-        g.fillOval((int) pedestrian.getAxeXP(), (int) pedestrian.getAxeYP(), 20, 20); // Draw the pedestrian
+        g.fillOval((int) pedestrian.getAxeXP(), (int) pedestrian.getAxeYP(), 20, 20); // desiner pieton
     }
 }

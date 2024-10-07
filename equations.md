@@ -121,4 +121,9 @@ Résumé :
     Piétons : Agissent ou attendent en fonction de l'état du feu
 
 
+
+
 ![Alt text](veic.png)
+
+
+Wilensky, U. (1998). NetLogo Traffic Intersection model. http://ccl.northwestern.edu/netlogo/models/TrafficIntersection. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
