@@ -41,3 +41,14 @@ public class Main {
         simulationPanel.startSimulation();
     }
 }
+
+/*
+ce code seulment produire un image car il manque tojour updateSimulation()
+ce code produire aider de chatgpt pour debut (inspretation)
+il va developer
+
+image nous monrte que le rectangle vert est feu
+                      le rectangle bleu est veichule
+                      le circle jaune est pieton
+
+ */
