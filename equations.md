@@ -119,3 +119,6 @@ Résumé :
     Voitures : Modélisées par des équations d'accélération, de mouvement à vitesse constante, de décélération et d'arrêt.
     Feu de circulation : Exprimé par une fonction qui change avec le temps (vert, jaune, rouge).
     Piétons : Agissent ou attendent en fonction de l'état du feu
+
+
+![Alt text](veic.png)
