@@ -1,3 +1,5 @@
+/*
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -12,5 +14,30 @@ public class Main {
         System.out.println(v.verifierArret(p,3,180));
 
 //Travail inspiré de chatgbt.
+    }
+}
+*/
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create JFrame
+        JFrame frame = new JFrame("Traffic Simulation");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800, 600);
+
+        // Create the simulation panel and add it to the frame
+        SimulationPanel simulationPanel = new SimulationPanel();
+        frame.add(simulationPanel);
+
+        // Set frame visibility
+        frame.setVisible(true);
+
+        // Start the simulation
+        simulationPanel.startSimulation();
     }
 }
