@@ -43,12 +43,13 @@ public class Main {
 }
 
 /*
-ce code seulment produire un image car il manque tojour updateSimulation()
-ce code produire aider de chatgpt pour debut (inspretation)
-il va developer
+Ce code ne fait que produire une image car il manque toujours la fonction updateSimulation().
+J'ai produit ce code avec l'aide de ChatGPT pour m'inspirer au début.
+je vais contunier .....
 
 image nous monrte que le rectangle vert est feu
                       le rectangle bleu est veichule
                       le circle jaune est pieton
 
+ils ne bougent pas
  */
