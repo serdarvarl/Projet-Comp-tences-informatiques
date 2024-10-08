@@ -69,11 +69,24 @@ La fonction suivante décrit l'état des feux en fonction du temps :
   $$
   L(t) =
   \begin{cases}
-  1, & 0 \leq t \mod T < T_g \\
+  1, & 0 \leq t \mod T < T_g \\  
   0.5, & T_g \leq t \mod T < T_g + T_y \\
   0, & T_g + T_y \leq t \mod T < T_g + T_y + T_r
   \end{cases}
   $$
+
+
+Si $T_g = 30 sn $ donc la duree de vert 30 second Total T = 60
+    
+$T_y = 5 sn $
+     
+$T_r = 25 sn$
+
+$T = 60 sn$
+
+  example: $ (t=10 \mod 60) = 10 < T_g $ 
+
+
   Où :
    - \( $T_g$ \) est la durée du feu vert,
    - \( $T_y$ \) est la durée du feu jaune,
